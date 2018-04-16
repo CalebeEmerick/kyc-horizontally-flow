@@ -8,11 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		3367F33E20853E490041A399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F33D20853E490041A399 /* AppDelegate.swift */; };
-		3367F34020853E490041A399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F33F20853E490041A399 /* ViewController.swift */; };
+		3367F34020853E490041A399 /* KYCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F33F20853E490041A399 /* KYCController.swift */; };
 		3367F34320853E490041A399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3367F34120853E490041A399 /* Main.storyboard */; };
 		3367F34520853E4B0041A399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3367F34420853E4B0041A399 /* Assets.xcassets */; };
 		3367F34820853E4B0041A399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3367F34620853E4B0041A399 /* LaunchScreen.storyboard */; };
 		3367F35320853E4B0041A399 /* KYCHorizontallyFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F35220853E4B0041A399 /* KYCHorizontallyFlowTests.swift */; };
+		3367F365208547730041A399 /* TableViewReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F361208547730041A399 /* TableViewReusable.swift */; };
+		3367F366208547730041A399 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F362208547730041A399 /* Reusable.swift */; };
+		3367F367208547730041A399 /* CollectionViewReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F363208547730041A399 /* CollectionViewReusable.swift */; };
+		3367F368208547730041A399 /* NibCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F364208547730041A399 /* NibCreatable.swift */; };
+		3367F36B208547830041A399 /* ViewCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F36A208547830041A399 /* ViewCreatable.swift */; };
+		3367F36E208547D00041A399 /* Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3367F36D208547D00041A399 /* Response.json */; };
+		3367F373208548970041A399 /* KeyboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F370208548970041A399 /* KeyboardModel.swift */; };
+		3367F374208548970041A399 /* KeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F371208548970041A399 /* KeyboardDelegate.swift */; };
+		3367F375208548970041A399 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F372208548970041A399 /* KeyboardManager.swift */; };
+		3367F378208548CF0041A399 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F377208548CF0041A399 /* Color.swift */; };
+		3367F380208549D20041A399 /* NavigationFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3367F37E208549D20041A399 /* NavigationFooterView.xib */; };
+		3367F381208549D20041A399 /* NavigationFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F37F208549D20041A399 /* NavigationFooterView.swift */; };
+		3367F38520854ACD0041A399 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F38420854ACD0041A399 /* JSON.swift */; };
+		3367F38720854B280041A399 /* QuestionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F38620854B280041A399 /* QuestionsResponse.swift */; };
+		3367F38920854BD60041A399 /* MetaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F38820854BD60041A399 /* MetaResponse.swift */; };
+		3367F38B20854BEF0041A399 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F38A20854BEF0041A399 /* Question.swift */; };
+		3367F38D20854C030041A399 /* QuestionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F38C20854C030041A399 /* QuestionType.swift */; };
+		3367F38F20854C190041A399 /* SingleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F38E20854C190041A399 /* SingleInput.swift */; };
+		3367F39120854C280041A399 /* SingleChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F39020854C280041A399 /* SingleChoice.swift */; };
+		3367F39320854C370041A399 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F39220854C370041A399 /* Answer.swift */; };
+		3367F39520854C620041A399 /* SingleInputValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F39420854C620041A399 /* SingleInputValidationType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +49,7 @@
 /* Begin PBXFileReference section */
 		3367F33A20853E490041A399 /* KYCHorizontallyFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KYCHorizontallyFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3367F33D20853E490041A399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3367F33F20853E490041A399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3367F33F20853E490041A399 /* KYCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCController.swift; sourceTree = "<group>"; };
 		3367F34220853E490041A399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3367F34420853E4B0041A399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3367F34720853E4B0041A399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +57,27 @@
 		3367F34E20853E4B0041A399 /* KYCHorizontallyFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KYCHorizontallyFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3367F35220853E4B0041A399 /* KYCHorizontallyFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCHorizontallyFlowTests.swift; sourceTree = "<group>"; };
 		3367F35420853E4B0041A399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3367F361208547730041A399 /* TableViewReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewReusable.swift; sourceTree = "<group>"; };
+		3367F362208547730041A399 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		3367F363208547730041A399 /* CollectionViewReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewReusable.swift; sourceTree = "<group>"; };
+		3367F364208547730041A399 /* NibCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibCreatable.swift; sourceTree = "<group>"; };
+		3367F36A208547830041A399 /* ViewCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCreatable.swift; sourceTree = "<group>"; };
+		3367F36D208547D00041A399 /* Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Response.json; sourceTree = "<group>"; };
+		3367F370208548970041A399 /* KeyboardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardModel.swift; sourceTree = "<group>"; };
+		3367F371208548970041A399 /* KeyboardDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardDelegate.swift; sourceTree = "<group>"; };
+		3367F372208548970041A399 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		3367F377208548CF0041A399 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		3367F37E208549D20041A399 /* NavigationFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationFooterView.xib; sourceTree = "<group>"; };
+		3367F37F208549D20041A399 /* NavigationFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationFooterView.swift; sourceTree = "<group>"; };
+		3367F38420854ACD0041A399 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		3367F38620854B280041A399 /* QuestionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsResponse.swift; sourceTree = "<group>"; };
+		3367F38820854BD60041A399 /* MetaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaResponse.swift; sourceTree = "<group>"; };
+		3367F38A20854BEF0041A399 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		3367F38C20854C030041A399 /* QuestionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionType.swift; sourceTree = "<group>"; };
+		3367F38E20854C190041A399 /* SingleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInput.swift; sourceTree = "<group>"; };
+		3367F39020854C280041A399 /* SingleChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleChoice.swift; sourceTree = "<group>"; };
+		3367F39220854C370041A399 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		3367F39420854C620041A399 /* SingleInputValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInputValidationType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +119,9 @@
 		3367F33C20853E490041A399 /* KYCHorizontallyFlow */ = {
 			isa = PBXGroup;
 			children = (
-				3367F33F20853E490041A399 /* ViewController.swift */,
-				3367F34120853E490041A399 /* Main.storyboard */,
+				3367F35E20853F8F0041A399 /* KYC */,
+				3367F35F208547130041A399 /* Commons */,
+				3367F36C2085479C0041A399 /* Resources */,
 				3367F35D20853E540041A399 /* Supporting Files */,
 			);
 			path = KYCHorizontallyFlow;
@@ -97,11 +140,119 @@
 			isa = PBXGroup;
 			children = (
 				3367F33D20853E490041A399 /* AppDelegate.swift */,
-				3367F34420853E4B0041A399 /* Assets.xcassets */,
 				3367F34620853E4B0041A399 /* LaunchScreen.storyboard */,
 				3367F34920853E4B0041A399 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3367F35E20853F8F0041A399 /* KYC */ = {
+			isa = PBXGroup;
+			children = (
+				3367F39620854CBD0041A399 /* View */,
+				3367F38220854A8B0041A399 /* Domain */,
+				3367F3792085491A0041A399 /* Footer */,
+			);
+			path = KYC;
+			sourceTree = "<group>";
+		};
+		3367F35F208547130041A399 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				3367F38320854AC20041A399 /* JSON */,
+				3367F376208548C00041A399 /* Color */,
+				3367F36F2085488B0041A399 /* Keyboard */,
+				3367F3602085471E0041A399 /* Reusable */,
+				3367F3692085477D0041A399 /* View */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		3367F3602085471E0041A399 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				3367F363208547730041A399 /* CollectionViewReusable.swift */,
+				3367F364208547730041A399 /* NibCreatable.swift */,
+				3367F362208547730041A399 /* Reusable.swift */,
+				3367F361208547730041A399 /* TableViewReusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		3367F3692085477D0041A399 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3367F36A208547830041A399 /* ViewCreatable.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3367F36C2085479C0041A399 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3367F34420853E4B0041A399 /* Assets.xcassets */,
+				3367F36D208547D00041A399 /* Response.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3367F36F2085488B0041A399 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3367F370208548970041A399 /* KeyboardModel.swift */,
+				3367F371208548970041A399 /* KeyboardDelegate.swift */,
+				3367F372208548970041A399 /* KeyboardManager.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		3367F376208548C00041A399 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				3367F377208548CF0041A399 /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		3367F3792085491A0041A399 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				3367F37E208549D20041A399 /* NavigationFooterView.xib */,
+				3367F37F208549D20041A399 /* NavigationFooterView.swift */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		3367F38220854A8B0041A399 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3367F38620854B280041A399 /* QuestionsResponse.swift */,
+				3367F38820854BD60041A399 /* MetaResponse.swift */,
+				3367F38A20854BEF0041A399 /* Question.swift */,
+				3367F38C20854C030041A399 /* QuestionType.swift */,
+				3367F38E20854C190041A399 /* SingleInput.swift */,
+				3367F39020854C280041A399 /* SingleChoice.swift */,
+				3367F39220854C370041A399 /* Answer.swift */,
+				3367F39420854C620041A399 /* SingleInputValidationType.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3367F38320854AC20041A399 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				3367F38420854ACD0041A399 /* JSON.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		3367F39620854CBD0041A399 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3367F34120853E490041A399 /* Main.storyboard */,
+				3367F33F20853E490041A399 /* KYCController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +336,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3367F380208549D20041A399 /* NavigationFooterView.xib in Resources */,
 				3367F34820853E4B0041A399 /* LaunchScreen.storyboard in Resources */,
 				3367F34520853E4B0041A399 /* Assets.xcassets in Resources */,
 				3367F34320853E490041A399 /* Main.storyboard in Resources */,
+				3367F36E208547D00041A399 /* Response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,8 +358,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3367F34020853E490041A399 /* ViewController.swift in Sources */,
+				3367F39520854C620041A399 /* SingleInputValidationType.swift in Sources */,
+				3367F373208548970041A399 /* KeyboardModel.swift in Sources */,
+				3367F38B20854BEF0041A399 /* Question.swift in Sources */,
+				3367F38520854ACD0041A399 /* JSON.swift in Sources */,
+				3367F39320854C370041A399 /* Answer.swift in Sources */,
+				3367F366208547730041A399 /* Reusable.swift in Sources */,
+				3367F378208548CF0041A399 /* Color.swift in Sources */,
+				3367F375208548970041A399 /* KeyboardManager.swift in Sources */,
+				3367F34020853E490041A399 /* KYCController.swift in Sources */,
+				3367F367208547730041A399 /* CollectionViewReusable.swift in Sources */,
+				3367F365208547730041A399 /* TableViewReusable.swift in Sources */,
+				3367F374208548970041A399 /* KeyboardDelegate.swift in Sources */,
+				3367F38920854BD60041A399 /* MetaResponse.swift in Sources */,
 				3367F33E20853E490041A399 /* AppDelegate.swift in Sources */,
+				3367F38D20854C030041A399 /* QuestionType.swift in Sources */,
+				3367F368208547730041A399 /* NibCreatable.swift in Sources */,
+				3367F36B208547830041A399 /* ViewCreatable.swift in Sources */,
+				3367F381208549D20041A399 /* NavigationFooterView.swift in Sources */,
+				3367F38F20854C190041A399 /* SingleInput.swift in Sources */,
+				3367F38720854B280041A399 /* QuestionsResponse.swift in Sources */,
+				3367F39120854C280041A399 /* SingleChoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +540,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q54VRJ624;
-				INFOPLIST_FILE = KYCHorizontallyFlow/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KYCHorizontallyFlow/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.buy4.KYCHorizontallyFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -386,7 +559,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q54VRJ624;
-				INFOPLIST_FILE = KYCHorizontallyFlow/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KYCHorizontallyFlow/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,7 +568,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.buy4.KYCHorizontallyFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
