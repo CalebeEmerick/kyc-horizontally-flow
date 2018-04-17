@@ -2,16 +2,16 @@
 //  QuestionType.swift
 //  KYCHorizontallyFlow
 //
-//  Created by Calebe Emerik  | Stone on 16/04/18.
+//  Created by Calebe Emerik  | Stone on 17/04/18.
 //  Copyright © 2018 Stone Pagamentos. All rights reserved.
 //
 
 import Foundation
 
-enum QuestionType: JSONDecodable {
+enum QuestionType {
     
-    case singleInput(SingleInput)
-    case singleChoice(SingleChoice)
+    case singleInput
+    case singleChoice
     
     init(json: JSON) throws {
         
@@ -19,15 +19,15 @@ enum QuestionType: JSONDecodable {
         
         switch typeString {
         case "single-input":
-            let model: SingleInput =
-                try getModel(for: "single-input-meta", from: json)
-            self = .singleInput(model)
+            self = .singleInput
         case "single-choice":
-            let model: SingleChoice =
-                try getModel(for: "single-choice-meta", from: json)
-            self = .singleChoice(model)
+            self = .singleChoice
         default:
             fatalError("NUNCA ENTRAR AQUI!")
         }
+    }
+    
+    static func asd() {
+        
     }
 }

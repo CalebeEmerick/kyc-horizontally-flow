@@ -17,6 +17,4 @@ struct Answer: JSONDecodable {
         id = try getValue(for: "answer_id", from: json)
         description = try getValue(for: "description", from: json)
     }
-    
-    
 }

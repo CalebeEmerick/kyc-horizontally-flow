@@ -33,9 +33,43 @@
                         },
                         {
                             "answer_id":"c63738d8-f0ae-40fd-8bb9-fd3e3d377be0",
-                            "description": "Faz diferença?"
+                            "description": "Prefiro não informar"
                         }
                     ]
+                }
+            },
+            {
+                "question_id": "jhgfdhj-4433-ghff-t5t5t",
+                "mandatory": true,
+                "question_title": "Nos informe sua data de nascimento",
+                "type": "single-input",
+                "single-input-meta": {
+                    "answer_id": "hgj46-7ea8-4fb4-d46d-4fgd65",
+                    "validation": "^[a-ZA-Z]{50}",
+                    "validation_type": "birthdate",
+                    "placeholder": "ex: 10/08/1989"
+                }
+            },
+            {
+                "question_id": "465sda-s465ad-sd645a-sa465d",
+                "mandatory": false,
+                "question_title": "Qual a cor da sua casa?",
+                "type": "single-input",
+                "single-input-meta": {
+                    "answer_id": "hgj46-7ea8-4fb4-d46d-4fgd65",
+                    "validation": "^[a-ZA-Z]{50}",
+                    "placeholder": "ex: Azul"
+                }
+            },
+            {
+                "question_id": "ds4a6-jhk56-ads56-9d8as",
+                "mandatory": false,
+                "question_title": "Qual a cor da sua casa?",
+                "type": "single-input",
+                "single-input-meta": {
+                    "answer_id": "hgj46-7ea8-4fb4-d46d-4fgd65",
+                    "validation": "^[a-ZA-Z]{50}",
+                    "placeholder": "ex: Azul"
                 }
             }
         ]

@@ -10,15 +10,18 @@ import Foundation
 
 enum SingleInputValidationType {
     
+    case name
     case cpf
-    case cnpj
+    case birthdate
     
     init(value: String) {
         switch value {
+        case "name":
+            self = .name
         case "cpf":
             self = .cpf
-        case "cnpj":
-            self = .cnpj
+        case "birthdate":
+            self = .birthdate
         default:
             fatalError("NUNCA DEVERIA CAIR AQUI!")
         }

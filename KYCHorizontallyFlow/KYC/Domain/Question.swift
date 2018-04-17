@@ -14,11 +14,21 @@ struct Question: JSONDecodable {
     let isMandatory: Bool
     let title: String
     let type: QuestionType
+    let meta: JSONDecodable
     
     init(json: JSON) throws {
-        self.id = try getValue(for: "question_id", from: json)
-        self.isMandatory = try getValue(for: "mandatory", from: json)
-        self.title = try getValue(for: "question_title", from: json)
-        self.type = try QuestionType(json: json)
+        id = try getValue(for: "question_id", from: json)
+        isMandatory = try getValue(for: "mandatory", from: json)
+        title = try getValue(for: "question_title", from: json)
+        type = try QuestionType(json: json)
+        
+        switch type {
+        case .singleInput:
+            let model: SingleInput = try getModel(for: "single-input-meta", from: json)
+            meta = model
+        case .singleChoice:
+            let model: SingleChoice = try getModel(for: "single-choice-meta", from: json)
+            meta = model
+        }
     }
 }
