@@ -10,6 +10,7 @@ import UIKit
 
 final class KYCDataSource: NSObject {
     
+    var footer: NavigationFooterView!
     var model: QuestionsDisplay!
     var viewModel: KYCViewModel!
 }
@@ -23,16 +24,18 @@ extension KYCDataSource: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let question = model.questions[indexPath.row]
+        let viewModel = model.viewModels[indexPath.row]
         
-        switch question.type {
+        switch viewModel.questionType {
         case .singleInput:
             let cell: SingleInputCell = collectionView.dequeueReusableCell(for: indexPath)
-            
+            cell.footer = footer
+            cell.viewModel = viewModel as! SingleInputCellViewModel
             return cell
         case .singleChoice:
             let cell: SingleChoiceCell = collectionView.dequeueReusableCell(for: indexPath)
-            
+            cell.footer = footer
+            cell.viewModel = viewModel as! SingleChoiceCellViewModel
             return cell
         }
     }

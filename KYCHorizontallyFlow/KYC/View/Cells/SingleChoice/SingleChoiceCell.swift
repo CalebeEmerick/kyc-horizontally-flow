@@ -12,11 +12,8 @@ final class SingleChoiceCell: UICollectionViewCell {
     
     @IBOutlet private var tableView: UITableView!
     
-//    var model: SingleChoiceAnswerModel? {
-//        didSet {
-//            updateUI()
-//        }
-//    }
+    weak var footer: NavigationFooterView!
+    weak var viewModel: CellViewModelProtocol!
     
     override func awakeFromNib() {
         super.awakeFromNib()

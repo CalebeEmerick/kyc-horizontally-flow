@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class SingleInputCell: UICollectionViewCell {
 
@@ -14,48 +16,54 @@ final class SingleInputCell: UICollectionViewCell {
 	@IBOutlet private var fieldContainer: UIView!
 	@IBOutlet private var textField: UITextField!
 	
-	@IBAction private func textFieldDidChange(_ textField: UITextField) {
-		guard let text = textField.text else { return }
-		setNextButtonTo(state: text.isEmpty)
-	}
-	
-	weak var footer: NavigationFooterView?
-	
-//    weak var model: SingleAnswerModel? {
-//        didSet {
-//            updateUI()
-//        }
-//    }
-	
+    private let disposeBag = DisposeBag()
+    
+	weak var footer: NavigationFooterView!
+    weak var viewModel: SingleInputCellViewModel! {
+        didSet {
+            configUI()
+        }
+    }
+    
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		
+        
 		roundContainer()
 	}
-	
-//    private func updateUI() {
-//        guard let model = model else { return }
-//        setOutlets(for: model)
-//    }
-	
-//    private func setOutlets(for model: SingleAnswerModel) {
-//        DispatchQueue.main.async {
-//            self.titleLabel.text = model.title
-//            self.textField.placeholder = model.placeholder
-//        }
-//    }
+    
+    private func configUI() {
+        setOutlets(for: viewModel.model)
+        setTextObservable()
+    }
+    
+    private func setOutlets(for model: SingleInputModel) {
+        DispatchQueue.main.async {
+            self.titleLabel.text = model.title
+            self.textField.placeholder = model.placeholder
+            self.textField.keyboardType = model.keyboard.type
+            self.textField.returnKeyType = model.keyboard.button
+            self.textField.autocapitalizationType = model.keyboard.capitalization
+            self.textField.autocorrectionType = model.keyboard.correction
+            self.textField.spellCheckingType = model.keyboard.spellChecking
+        }
+    }
 	
 	private func roundContainer() {
 		fieldContainer.layer.cornerRadius = 3
 		fieldContainer.clipsToBounds = true
 	}
-	
-	private func setNextButtonTo(state: Bool) {
-		if !state {
-			footer?.enableNextButton()
-		}
-		else {
-			footer?.disableNextButton()
-		}
-	}
+    
+    private func setTextObservable() {
+        textField.rx.text.orEmpty
+            .subscribe(onNext: { [weak self] text in
+                self?.shouldEnableNextButton(for: text)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func shouldEnableNextButton(for text: String) {
+        viewModel.shouldEnableNextButton(for: text)
+            .bind(to: footer.nextButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+    }
 }

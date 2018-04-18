@@ -24,6 +24,8 @@ struct KeyboardSingleInput {
             self.type = .numberPad
         case .birthdate:
             capitalization = .words
+        case .other:
+            capitalization = .sentences
         }
     }
 }

@@ -12,7 +12,7 @@
                 "single-input-meta": {
                     "answer_id": "79772246-7ea8-4fb4-b9ec-e36325a3d693",
                     "validation": "^[a-ZA-Z]{50}",
-                    "validation_type": "cpf",
+                    "validation_type": "name",
                     "placeholder": "ex: João Silva da Costa"
                 }
             },
@@ -58,6 +58,7 @@
                 "single-input-meta": {
                     "answer_id": "hgj46-7ea8-4fb4-d46d-4fgd65",
                     "validation": "^[a-ZA-Z]{50}",
+                    "validation_type": "other",
                     "placeholder": "ex: Azul"
                 }
             },
@@ -69,6 +70,7 @@
                 "single-input-meta": {
                     "answer_id": "hgj46-7ea8-4fb4-d46d-4fgd65",
                     "validation": "^[a-ZA-Z]{50}",
+                    "validation_type": "other",
                     "placeholder": "ex: Azul"
                 }
             }

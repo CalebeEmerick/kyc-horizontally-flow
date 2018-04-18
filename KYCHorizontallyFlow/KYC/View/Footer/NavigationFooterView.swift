@@ -11,7 +11,7 @@ import UIKit
 final class NavigationFooterView: UIView {
     
     @IBOutlet private var previousButton: UIButton!
-    @IBOutlet private var nextButton: UIButton!
+    @IBOutlet private(set) var nextButton: UIButton!
     
 	@IBAction private func previousAction() {
 		didTapPreviousAction?()

@@ -40,9 +40,6 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                        <connections>
-                                            <action selector="textFieldDidChange:" destination="gTV-IL-0wX" eventType="editingChanged" id="2e2-Ty-9mH"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,7 +77,7 @@
                 <outlet property="textField" destination="F7K-QW-1vN" id="eeq-LS-DUz"/>
                 <outlet property="titleLabel" destination="PT8-qd-4oS" id="xMk-ak-SVo"/>
             </connections>
-            <point key="canvasLocation" x="25" y="-66"/>
+            <point key="canvasLocation" x="210" y="-176"/>
         </collectionViewCell>
     </objects>
 </document>

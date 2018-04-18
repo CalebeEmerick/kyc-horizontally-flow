@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3330E8D72087DFE50002D14E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3367F3A1208641760041A399 /* RxCocoa.framework */; };
+		3330E8D82087DFE50002D14E /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3367F3A1208641760041A399 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3330E8D92087DFE50002D14E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3367F3A2208641760041A399 /* RxSwift.framework */; };
+		3330E8DA2087DFE50002D14E /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3367F3A2208641760041A399 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3330F27320868C0B0063C9DD /* KeyboardSingleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330F27220868C0B0063C9DD /* KeyboardSingleInput.swift */; };
 		3330F27520868C290063C9DD /* QuestionTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330F27420868C290063C9DD /* QuestionTypeProtocol.swift */; };
 		3330F27720868C3C0063C9DD /* SingleInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330F27620868C3C0063C9DD /* SingleInputModel.swift */; };
@@ -38,8 +42,6 @@
 		3367F39320854C370041A399 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F39220854C370041A399 /* Answer.swift */; };
 		3367F39520854C620041A399 /* SingleInputValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F39420854C620041A399 /* SingleInputValidationType.swift */; };
 		3367F39B208639820041A399 /* QuestionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F39A208639820041A399 /* QuestionsService.swift */; };
-		3367F3A3208641760041A399 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3367F3A1208641760041A399 /* RxCocoa.framework */; };
-		3367F3A4208641760041A399 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3367F3A2208641760041A399 /* RxSwift.framework */; };
 		3370CB9F20864A77005E3ED5 /* SingleInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3370CB9D20864A77005E3ED5 /* SingleInputCell.xib */; };
 		3370CBA020864A77005E3ED5 /* SingleInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3370CB9E20864A77005E3ED5 /* SingleInputCell.swift */; };
 		3370CBA8208664E7005E3ED5 /* SingleChoiceAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3370CBA2208664E7005E3ED5 /* SingleChoiceAnswerCell.swift */; };
@@ -48,12 +50,13 @@
 		3370CBAB208664E7005E3ED5 /* SingleChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3370CBA5208664E7005E3ED5 /* SingleChoiceCell.swift */; };
 		3370CBAC208664E7005E3ED5 /* SingleChoiceAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3370CBA6208664E7005E3ED5 /* SingleChoiceAnswerCell.xib */; };
 		3370CBAD208664E7005E3ED5 /* SingleChoiceTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3370CBA7208664E7005E3ED5 /* SingleChoiceTitleCell.xib */; };
-		338701D320866B62008637F2 /* SingleInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338701D220866B62008637F2 /* SingleInputScreen.swift */; };
-		338701D520866B99008637F2 /* SingleChoiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338701D420866B99008637F2 /* SingleChoiceScreen.swift */; };
+		338701D320866B62008637F2 /* SingleInputCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338701D220866B62008637F2 /* SingleInputCellViewModel.swift */; };
+		338701D520866B99008637F2 /* SingleChoiceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338701D420866B99008637F2 /* SingleChoiceCellViewModel.swift */; };
 		338701D82086809C008637F2 /* QuestionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338701D72086809C008637F2 /* QuestionType.swift */; };
 		33A02C60208691DF00FB589C /* QuestionsDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A02C5F208691DF00FB589C /* QuestionsDisplay.swift */; };
 		33A02C62208697D900FB589C /* SingleChoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A02C61208697D900FB589C /* SingleChoiceModel.swift */; };
 		33A02C6420869C8800FB589C /* KYCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A02C6320869C8800FB589C /* KYCDataSource.swift */; };
+		33AC5B9D2087B7D40011CE2D /* CellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AC5B9C2087B7D40011CE2D /* CellViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,21 @@
 			remoteInfo = KYCHorizontallyFlow;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3330E8DB2087DFE50002D14E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3330E8DA2087DFE50002D14E /* RxSwift.framework in Embed Frameworks */,
+				3330E8D82087DFE50002D14E /* RxCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3330F27220868C0B0063C9DD /* KeyboardSingleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSingleInput.swift; sourceTree = "<group>"; };
@@ -112,12 +130,13 @@
 		3370CBA5208664E7005E3ED5 /* SingleChoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleChoiceCell.swift; sourceTree = "<group>"; };
 		3370CBA6208664E7005E3ED5 /* SingleChoiceAnswerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleChoiceAnswerCell.xib; sourceTree = "<group>"; };
 		3370CBA7208664E7005E3ED5 /* SingleChoiceTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleChoiceTitleCell.xib; sourceTree = "<group>"; };
-		338701D220866B62008637F2 /* SingleInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInputScreen.swift; sourceTree = "<group>"; };
-		338701D420866B99008637F2 /* SingleChoiceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleChoiceScreen.swift; sourceTree = "<group>"; };
+		338701D220866B62008637F2 /* SingleInputCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInputCellViewModel.swift; sourceTree = "<group>"; };
+		338701D420866B99008637F2 /* SingleChoiceCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleChoiceCellViewModel.swift; sourceTree = "<group>"; };
 		338701D72086809C008637F2 /* QuestionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionType.swift; sourceTree = "<group>"; };
 		33A02C5F208691DF00FB589C /* QuestionsDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDisplay.swift; sourceTree = "<group>"; };
 		33A02C61208697D900FB589C /* SingleChoiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleChoiceModel.swift; sourceTree = "<group>"; };
 		33A02C6320869C8800FB589C /* KYCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCDataSource.swift; sourceTree = "<group>"; };
+		33AC5B9C2087B7D40011CE2D /* CellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +144,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3367F3A3208641760041A399 /* RxCocoa.framework in Frameworks */,
-				3367F3A4208641760041A399 /* RxSwift.framework in Frameworks */,
+				3330E8D92087DFE50002D14E /* RxSwift.framework in Frameworks */,
+				3330E8D72087DFE50002D14E /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +164,7 @@
 			children = (
 				3330F27220868C0B0063C9DD /* KeyboardSingleInput.swift */,
 				3330F27420868C290063C9DD /* QuestionTypeProtocol.swift */,
+				33AC5B9C2087B7D40011CE2D /* CellViewModelProtocol.swift */,
 				33A02C5F208691DF00FB589C /* QuestionsDisplay.swift */,
 				3330F27620868C3C0063C9DD /* SingleInputModel.swift */,
 				33A02C61208697D900FB589C /* SingleChoiceModel.swift */,
@@ -362,7 +382,7 @@
 			children = (
 				3370CB9D20864A77005E3ED5 /* SingleInputCell.xib */,
 				3370CB9E20864A77005E3ED5 /* SingleInputCell.swift */,
-				338701D220866B62008637F2 /* SingleInputScreen.swift */,
+				338701D220866B62008637F2 /* SingleInputCellViewModel.swift */,
 			);
 			path = SingleInput;
 			sourceTree = "<group>";
@@ -373,7 +393,7 @@
 				338701D620866BB4008637F2 /* TableView */,
 				3370CBA3208664E7005E3ED5 /* SingleChoiceCell.xib */,
 				3370CBA5208664E7005E3ED5 /* SingleChoiceCell.swift */,
-				338701D420866B99008637F2 /* SingleChoiceScreen.swift */,
+				338701D420866B99008637F2 /* SingleChoiceCellViewModel.swift */,
 			);
 			path = SingleChoice;
 			sourceTree = "<group>";
@@ -399,6 +419,7 @@
 				3367F33620853E490041A399 /* Sources */,
 				3367F33720853E490041A399 /* Frameworks */,
 				3367F33820853E490041A399 /* Resources */,
+				3330E8DB2087DFE50002D14E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -509,11 +530,12 @@
 				33A02C62208697D900FB589C /* SingleChoiceModel.swift in Sources */,
 				3367F367208547730041A399 /* CollectionViewReusable.swift in Sources */,
 				3367F365208547730041A399 /* TableViewReusable.swift in Sources */,
-				338701D320866B62008637F2 /* SingleInputScreen.swift in Sources */,
+				338701D320866B62008637F2 /* SingleInputCellViewModel.swift in Sources */,
 				3367F374208548970041A399 /* KeyboardDelegate.swift in Sources */,
 				3367F38920854BD60041A399 /* MetaResponse.swift in Sources */,
+				33AC5B9D2087B7D40011CE2D /* CellViewModelProtocol.swift in Sources */,
 				3367F33E20853E490041A399 /* AppDelegate.swift in Sources */,
-				338701D520866B99008637F2 /* SingleChoiceScreen.swift in Sources */,
+				338701D520866B99008637F2 /* SingleChoiceCellViewModel.swift in Sources */,
 				3367F39B208639820041A399 /* QuestionsService.swift in Sources */,
 				338701D82086809C008637F2 /* QuestionType.swift in Sources */,
 				33A02C60208691DF00FB589C /* QuestionsDisplay.swift in Sources */,

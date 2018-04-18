@@ -11,10 +11,26 @@ import Foundation
 final class QuestionsDisplay {
     
     let numberOfQuestions: Int
-    let questions: [QuestionTypeProtocol]
+    let viewModels: [CellViewModelProtocol]
     
-    init(questions: [QuestionTypeProtocol]) {
-        self.questions = questions
-        self.numberOfQuestions = questions.count
+    init(response: QuestionsResponse) {
+        
+        var viewModels: [CellViewModelProtocol] = []
+            
+        for question in response.questions {
+            switch question.type {
+            case .singleInput:
+                let model = SingleInputModel(question: question)
+                let viewModel = SingleInputCellViewModel(model: model)
+                viewModels.append(viewModel)
+            case .singleChoice:
+                let model = SingleChoiceModel(question: question)
+                let viewModel = SingleChoiceCellViewModel(model: model)
+                viewModels.append(viewModel)
+            }
+        }
+        
+        self.viewModels = viewModels
+        self.numberOfQuestions = viewModels.count
     }
 }

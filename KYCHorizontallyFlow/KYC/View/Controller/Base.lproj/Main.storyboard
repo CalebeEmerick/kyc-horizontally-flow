@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j4i-yD-JkG">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,13 +13,13 @@
         <!--Sobre você-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="KYCController" customModule="KYCHorizontallyFlow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="KYCController" customModule="KYCHorizontallyFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YM-Z2-eoP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="454"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uj1-yY-Dl0">
                                     <size key="itemSize" width="50" height="50"/>
@@ -29,10 +29,20 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3NB-Lt-5ct">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZSh-sB-3NF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9YM-Z2-eoP" secondAttribute="bottom" id="Soa-lt-bxN"/>
+                            <constraint firstItem="3NB-Lt-5ct" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7CA-fG-ZpK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3NB-Lt-5ct" secondAttribute="bottom" id="KrU-lR-dHy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3NB-Lt-5ct" secondAttribute="trailing" id="Rzs-V6-LOr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9YM-Z2-eoP" secondAttribute="bottom" constant="50" id="cXH-wY-Nfe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9YM-Z2-eoP" secondAttribute="trailing" id="dX9-Tq-4r4"/>
                             <constraint firstItem="9YM-Z2-eoP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lPj-xF-0Te"/>
                             <constraint firstItem="9YM-Z2-eoP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mD8-LF-cnP"/>
@@ -42,11 +52,13 @@
                     <navigationItem key="navigationItem" title="Sobre você" id="lbS-OT-UQY"/>
                     <connections>
                         <outlet property="collectionView" destination="9YM-Z2-eoP" id="jDD-Qw-K1F"/>
+                        <outlet property="footerBottomConstraint" destination="KrU-lR-dHy" id="Moh-A4-OJp"/>
+                        <outlet property="footerView" destination="3NB-Lt-5ct" id="1Zo-dr-dqO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="143"/>
+            <point key="canvasLocation" x="752.79999999999995" y="142.57871064467767"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wLg-m1-9Lw">
@@ -54,7 +66,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j4i-yD-JkG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hyy-69-P64">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

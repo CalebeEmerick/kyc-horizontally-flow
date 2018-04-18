@@ -13,6 +13,7 @@ enum SingleInputValidationType {
     case name
     case cpf
     case birthdate
+    case other
     
     init(value: String) {
         switch value {
@@ -22,6 +23,8 @@ enum SingleInputValidationType {
             self = .cpf
         case "birthdate":
             self = .birthdate
+        case "other":
+            self = .other
         default:
             fatalError("NUNCA DEVERIA CAIR AQUI!")
         }

@@ -12,34 +12,17 @@ import RxSwift
 final class KYCViewModel {
     
     private let service = QuestionsService()
-    private let singleInputViewModel = SingleInputCellViewModel()
-    private let singleChoiceViewModel = SingleChoiceCellViewModel()
+//    private let singleInputViewModel = SingleInputCellViewModel()
+//    private let singleChoiceViewModel = SingleChoiceCellViewModel()
     
     func getQuestions() -> Observable<QuestionsDisplay> {
         
         let questionsDisplay = service.getQuestions()
-            .map({ [unowned self] response -> QuestionsDisplay in
-                self.parseResponseToQuestionsDisplay(response)
+            .map({ response -> QuestionsDisplay in
+                return QuestionsDisplay(response: response)
             })
         
         return questionsDisplay
-    }
-    
-    private func parseResponseToQuestionsDisplay(_ response: QuestionsResponse) -> QuestionsDisplay {
-        var questions: [QuestionTypeProtocol] = []
-        
-        for question in response.questions {
-            switch question.type {
-            case .singleInput:
-                let model = SingleInputModel(question: question)
-                questions.append(model)
-            case .singleChoice:
-                let model = SingleChoiceModel(question: question)
-                questions.append(model)
-            }
-        }
-        
-        return QuestionsDisplay(questions: questions)
     }
     
     private func getCellViewModel(from questionsDisplay: QuestionsDisplay) {
