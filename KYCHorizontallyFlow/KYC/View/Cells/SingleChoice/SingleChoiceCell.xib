@@ -32,6 +32,9 @@
                 <constraint firstAttribute="bottom" secondItem="D0L-se-1Kr" secondAttribute="bottom" id="rct-9I-4uh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="tableView" destination="D0L-se-1Kr" id="Fd7-sL-E1L"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>

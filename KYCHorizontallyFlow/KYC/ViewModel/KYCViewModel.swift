@@ -12,21 +12,14 @@ import RxSwift
 final class KYCViewModel {
     
     private let service = QuestionsService()
-//    private let singleInputViewModel = SingleInputCellViewModel()
-//    private let singleChoiceViewModel = SingleChoiceCellViewModel()
     
     func getQuestions() -> Observable<QuestionsDisplay> {
         
         let questionsDisplay = service.getQuestions()
-            .map({ response -> QuestionsDisplay in
+            .map({ response in
                 return QuestionsDisplay(response: response)
             })
         
         return questionsDisplay
-    }
-    
-    private func getCellViewModel(from questionsDisplay: QuestionsDisplay) {
-        // PENSAR SE DEVO FAZER O VIEWMODEL DA CELL GENERICO E DEPOIS FAZER O DOWNCASTING
-        // OU SE DEVO RECEBER O MODELO NA CELL E DEPOIS PASSAR PRO VIEWMODEL
     }
 }

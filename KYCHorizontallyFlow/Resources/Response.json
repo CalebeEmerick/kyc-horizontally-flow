@@ -64,14 +64,14 @@
             },
             {
                 "question_id": "ds4a6-jhk56-ads56-9d8as",
-                "mandatory": false,
-                "question_title": "Qual a cor da sua casa?",
+                "mandatory": true,
+                "question_title": "Nos informe qual seu CPF",
                 "type": "single-input",
                 "single-input-meta": {
-                    "answer_id": "hgj46-7ea8-4fb4-d46d-4fgd65",
+                    "answer_id": "ire9-lk34-4fb4-lkj34-saddsa0",
                     "validation": "^[a-ZA-Z]{50}",
-                    "validation_type": "other",
-                    "placeholder": "ex: Azul"
+                    "validation_type": "cpf",
+                    "placeholder": "ex: 153.530.352-33"
                 }
             }
         ]

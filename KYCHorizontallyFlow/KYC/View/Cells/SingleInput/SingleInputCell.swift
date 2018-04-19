@@ -16,7 +16,7 @@ final class SingleInputCell: UICollectionViewCell {
 	@IBOutlet private var fieldContainer: UIView!
 	@IBOutlet private var textField: UITextField!
 	
-    private let disposeBag = DisposeBag()
+	private let disposeBag = DisposeBag()
     
 	weak var footer: NavigationFooterView!
     weak var viewModel: SingleInputCellViewModel! {
