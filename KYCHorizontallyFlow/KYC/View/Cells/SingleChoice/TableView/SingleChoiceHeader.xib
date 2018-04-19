@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Rth-c3-5Dk" customClass="SingleChoiceHeader" customModule="KYCHorizontallyFlow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsF-DM-UqM">
+                    <rect key="frame" x="20" y="40" width="280" height="32.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fsF-DM-UqM" secondAttribute="bottom" constant="30.5" id="4wO-RH-q51"/>
+                <constraint firstAttribute="trailing" secondItem="fsF-DM-UqM" secondAttribute="trailing" constant="20" id="Rfc-6R-8Yq"/>
+                <constraint firstItem="fsF-DM-UqM" firstAttribute="top" secondItem="Rth-c3-5Dk" secondAttribute="top" constant="40" id="VOe-P9-bmk"/>
+                <constraint firstItem="fsF-DM-UqM" firstAttribute="leading" secondItem="Rth-c3-5Dk" secondAttribute="leading" constant="20" id="tE8-Cm-UHG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Xtm-gi-Y7g"/>
+            <connections>
+                <outlet property="titleLabel" destination="fsF-DM-UqM" id="TcE-5g-uzU"/>
+            </connections>
+            <point key="canvasLocation" x="190" y="-246"/>
+        </view>
+    </objects>
+</document>

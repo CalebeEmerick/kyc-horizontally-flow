@@ -10,10 +10,23 @@ import UIKit
 
 final class SingleChoiceDelegate: NSObject {
 	
-	
+    var header: SingleChoiceHeader?
 }
 
 extension SingleChoiceDelegate: UITableViewDelegate {
 	
-	
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return UITableViewAutomaticDimension
+    }
 }

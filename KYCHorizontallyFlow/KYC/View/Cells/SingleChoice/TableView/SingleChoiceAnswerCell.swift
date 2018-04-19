@@ -13,11 +13,11 @@ final class SingleChoiceAnswerCell: UITableViewCell {
     @IBOutlet private var answerContainer: UIView!
     @IBOutlet private var answerLabel: UILabel!
     
-//    var model: AnswerOption? {
-//        didSet {
-//            updateUI()
-//        }
-//    }
+    var answer: Answer? {
+        didSet {
+            updateUI()
+        }
+    }
     
     override var isSelected: Bool {
         get {
@@ -47,16 +47,16 @@ final class SingleChoiceAnswerCell: UITableViewCell {
         }
     }
     
-//    private func updateUI() {
-//        guard let model = model else { return }
-//        updateOutlets(for: model)
-//    }
+    private func updateUI() {
+        guard let answer = answer else { return }
+        updateOutlets(for: answer)
+    }
     
-//    private func updateOutlets(for model: AnswerOption) {
-//        DispatchQueue.main.async {
-//            self.answerLabel.text = model.answer
-//        }
-//    }
+    private func updateOutlets(for answer: Answer) {
+        DispatchQueue.main.async {
+            self.answerLabel.text = answer.description
+        }
+    }
     
     private func changeBackground(to color: UIColor) {
         UIView.animate(withDuration: 0.3) {
