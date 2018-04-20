@@ -26,8 +26,4 @@ enum QuestionType {
             fatalError("NUNCA ENTRAR AQUI!")
         }
     }
-    
-    static func asd() {
-        
-    }
 }

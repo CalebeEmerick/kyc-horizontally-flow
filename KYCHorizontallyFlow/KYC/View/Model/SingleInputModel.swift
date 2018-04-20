@@ -10,8 +10,6 @@ import Foundation
 
 final class SingleInputModel: QuestionTypeProtocol {
     
-    typealias QuestionAnswer = (id: String, answer: String)
-    
     let questionId: String
     let isMandatory: Bool
     let title: String
@@ -21,8 +19,6 @@ final class SingleInputModel: QuestionTypeProtocol {
     let validation: String
     let validationType: SingleInputValidationType
     let keyboard: KeyboardSingleInput
-    
-    var answer: AnswerState = .none
     
     init(question: Question) {
         questionId = question.id
@@ -35,10 +31,5 @@ final class SingleInputModel: QuestionTypeProtocol {
         validation = meta.validation
         validationType = meta.validationType
         keyboard = KeyboardSingleInput(for: validationType)
-    }
-    
-    enum AnswerState {
-        case none
-        case selected(QuestionAnswer)
     }
 }

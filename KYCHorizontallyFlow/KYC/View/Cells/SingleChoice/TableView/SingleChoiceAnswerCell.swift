@@ -13,7 +13,7 @@ final class SingleChoiceAnswerCell: UITableViewCell {
     @IBOutlet private var answerContainer: UIView!
     @IBOutlet private var answerLabel: UILabel!
     
-    var answer: Answer? {
+    var answer: Answer! {
         didSet {
             updateUI()
         }
@@ -48,13 +48,8 @@ final class SingleChoiceAnswerCell: UITableViewCell {
     }
     
     private func updateUI() {
-        guard let answer = answer else { return }
-        updateOutlets(for: answer)
-    }
-    
-    private func updateOutlets(for answer: Answer) {
         DispatchQueue.main.async {
-            self.answerLabel.text = answer.description
+            self.answerLabel.text = self.answer.description
         }
     }
     

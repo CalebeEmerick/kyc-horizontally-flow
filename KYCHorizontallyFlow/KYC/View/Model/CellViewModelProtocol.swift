@@ -8,7 +8,22 @@
 
 import UIKit
 
+struct QuestionAnswer {
+    
+    let questionId: String
+    let answerId: String
+    let question: String
+    let answer: String
+}
+
+enum AnswerState {
+    
+    case none
+    case answered(with: QuestionAnswer)
+}
+
 protocol CellViewModelProtocol: AnyObject {
     
     var questionType: QuestionType { get }
+    var answer: AnswerState { get set }
 }

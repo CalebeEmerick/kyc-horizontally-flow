@@ -10,9 +10,13 @@ import UIKit
 
 final class KYCDataSource: NSObject {
     
-    var footer: NavigationFooterView!
     var model: QuestionsDisplay!
-    var viewModel: KYCViewModel!
+    
+    private func dequeueCell<T>(of type: T.Type, from collectionView: UICollectionView, with indexPath: IndexPath)
+        -> T where T: Reusable {
+            let cell: T = collectionView.dequeueReusableCell(for: indexPath)
+            return cell
+    }
 }
 
 extension KYCDataSource: UICollectionViewDataSource {
@@ -28,15 +32,9 @@ extension KYCDataSource: UICollectionViewDataSource {
         
         switch viewModel.questionType {
         case .singleInput:
-            let cell: SingleInputCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.footer = footer
-            cell.viewModel = viewModel as! SingleInputCellViewModel
-            return cell
+            return dequeueCell(of: SingleInputCell.self, from: collectionView, with: indexPath)
         case .singleChoice:
-            let cell: SingleChoiceCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.footer = footer
-            cell.viewModel = viewModel as! SingleChoiceCellViewModel
-            return cell
+            return dequeueCell(of: SingleChoiceCell.self, from: collectionView, with: indexPath)
         }
     }
 }

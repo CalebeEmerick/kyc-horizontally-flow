@@ -11,6 +11,7 @@ import UIKit
 final class SingleChoiceDelegate: NSObject {
 	
     var header: SingleChoiceHeader?
+    var didSelectAnswer: ((IndexPath) -> Void)?
 }
 
 extension SingleChoiceDelegate: UITableViewDelegate {
@@ -28,5 +29,10 @@ extension SingleChoiceDelegate: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        didSelectAnswer?(indexPath)
     }
 }

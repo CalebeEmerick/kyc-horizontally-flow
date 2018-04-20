@@ -14,15 +14,15 @@ final class NavigationFooterView: UIView {
     @IBOutlet private(set) var nextButton: UIButton!
     
 	@IBAction private func previousAction() {
-		didTapPreviousAction?()
+		didTapPreviousButton?()
 	}
 	
 	@IBAction private func nextAction() {
-		didTapNextAction?()
+		didTapNextButton?()
 	}
 	
-	var didTapPreviousAction: (() -> Void)?
-	var didTapNextAction: (() -> Void)?
+	var didTapPreviousButton: (() -> Void)?
+	var didTapNextButton: (() -> Void)?
 	
 	override func awakeFromNib() {
         super.awakeFromNib()
