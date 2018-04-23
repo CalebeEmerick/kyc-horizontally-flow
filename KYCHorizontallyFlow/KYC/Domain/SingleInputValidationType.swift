@@ -12,6 +12,7 @@ enum SingleInputValidationType {
     
     case name
     case cpf
+    case cnpj
     case birthdate
     case other
     
@@ -21,6 +22,8 @@ enum SingleInputValidationType {
             self = .name
         case "cpf":
             self = .cpf
+        case "cnpj":
+            self = .cnpj
         case "birthdate":
             self = .birthdate
         case "other":

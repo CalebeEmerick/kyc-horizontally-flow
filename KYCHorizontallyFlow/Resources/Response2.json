@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "version": "0.1.4",
+        "total_records": 3
+    },
+    "questions": [
+        {
+            "question_id": "hjk56-erw456-sda465-uyi89",
+            "mandatory": true,
+            "question_title": "Nos conte qual o nome de sua empresa",
+            "type": "single-input",
+            "single-input-meta": {
+                "answer_id": "4a35g435-65ds4-64ads-yjthg789-fgfh132",
+                "validation": "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$",
+                "validation_type": "name",
+                "placeholder": "ex: Coca-Cola Ltda."
+            }
+        },
+        {
+            "question_id": "hfg46-fgh6-ghf789-gh123f",
+            "mandatory": true,
+            "question_title": "Nos informe qual seu CNPJ",
+            "type": "single-input",
+            "single-input-meta": {
+                "answer_id": "ire9-lk34-4fb4-lkj34-saddsa0",
+                "validation": "^(([0-9]{2}.[0-9]{3}.[0-9]{3}/[0-9]{4}-[0-9]{2})|([0-9]{14}))$",
+                "validation_type": "cnpj",
+                "placeholder": "ex: 16.501.555/0001-57"
+            }
+        },
+        {
+            "question_id": "1xcz3-hjg13-fdg789-hkjjhk",
+            "mandatory": true,
+            "question_title": "Qual o faturamento médio de sua empresa?",
+            "type": "single-choice",
+            "single-choice-meta": {
+                "answers": [
+                    {
+                        "answer_id":"456fgd-a4f1-911d-fgd89",
+                        "description": "R$ 100.000,00 reais"
+                    },
+                    {
+                        "answer_id":"dfs132-das13-9997-ghf46",
+                        "description": "R$ 200.000,00 reais"
+                    },
+                    {
+                        "answer_id":"fgd13-gfd789-dsa56-dsa156",
+                        "description": "R$ 300.000,00 reais"
+                    },
+                    {
+                        "answer_id":"ht13-40fd-8bb9-sdf456",
+                        "description": "R$ 500.000,00 reais"
+                    },
+                    {
+                        "answer_id":"dsa456-231sad-8bb9-sda789",
+                        "description": "R$ 700.000,00 reais"
+                    },
+                    {
+                        "answer_id":"sda516-s321-hjg46-jkl6",
+                        "description": "Mais de R$ 1.000.000,00 de reais"
+                    }
+                ]
+            }
+        }
+    ]
+}

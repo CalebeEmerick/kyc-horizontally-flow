@@ -31,6 +31,10 @@ final class KYCViewModel {
         return hasPreviousItem
     }
     
+    var hasMoreQuestions: Bool {
+        return service.hasMoreQuestions()
+    }
+    
     func getCurrentIndex() -> Observable<Int> {
         return indexSubject
             .distinctUntilChanged()

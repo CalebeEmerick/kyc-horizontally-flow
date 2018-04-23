@@ -75,7 +75,9 @@ final class SingleChoiceCell: UICollectionViewCell {
 	private func configUI() {
 		dataSource.answers = viewModel.model.answers
         setupDelegate()
-        tableView.reloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.tableView.reloadData()
+        }
 	}
 	
 	private func setSpaceBottom() {

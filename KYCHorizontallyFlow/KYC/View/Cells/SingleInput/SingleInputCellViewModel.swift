@@ -12,6 +12,8 @@ import RxSwift
 final class SingleInputCellViewModel: CellViewModelProtocol {
     
     private let cpfValidator = CPFValidator()
+    private let cnpjValidator = CNPJValidator()
+    
     let model: SingleInputModel
     let questionType: QuestionType
     
@@ -32,10 +34,6 @@ final class SingleInputCellViewModel: CellViewModelProtocol {
         return model.validationType == .birthdate
     }
     
-    var needsExtraValidation: Bool {
-        return model.validationType == .cpf
-    }
-    
     func shouldEnableNextButton(for text: String) -> Observable<Bool> {
         
         guard model.isMandatory else {
@@ -43,7 +41,7 @@ final class SingleInputCellViewModel: CellViewModelProtocol {
         }
         
         if needsExtraValidation {
-            let validationResult = cpfValidator.validate(cpf: text)
+            let validationResult = checksExtraValidation(for: text)
             return Observable.just(validationResult)
         }
         
@@ -59,11 +57,26 @@ final class SingleInputCellViewModel: CellViewModelProtocol {
         return formatter.string(from: date)
     }
     
+    private var needsExtraValidation: Bool {
+        return model.validationType == .cpf || model.validationType == .cnpj
+    }
+    
     private func validate(_ text: String) -> Bool {
         let regex = try? NSRegularExpression(pattern: model.validation, options: [])
         let range = NSRange(location: 0, length: text.count)
         let numberOfMatches = regex?.numberOfMatches(in: text, options: [], range: range) ?? 0
         return numberOfMatches > 0
+    }
+    
+    private func checksExtraValidation(for text: String) -> Bool {
+        switch model.validationType {
+        case .cpf:
+            return cpfValidator.validate(cpf: text)
+        case .cnpj:
+            return cnpjValidator.validate(cnpj: text)
+        default:
+            fatalError("NUNCA DEVERIA CAIR AQUI!")
+        }
     }
     
     private func updateAnswer() {

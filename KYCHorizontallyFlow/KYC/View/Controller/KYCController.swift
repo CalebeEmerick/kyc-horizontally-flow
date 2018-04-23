@@ -164,15 +164,23 @@ extension KYCController {
             showNextQuestion()
         }
         else {
-            compileAnswers()
+            if viewModel.hasMoreQuestions {
+                
+                let loading = SimpleLoading()
+                
+                loading.showLoading()
+                moveToPage(index: 0)
+                getQuestions()
+            }
         }
     }
-    
+
+    // COMPILA E MOSTRA AS RESPOSTAS EM UMA TELA SEPARADA
     private func compileAnswers() {
         let answers = viewModel.getAnswers()
         let controller = storyboard?.instantiateViewController(withIdentifier: "AnswersController") as! AnswersController
         controller.answers = answers
-        
+
         DispatchQueue.main.async {
             self.show(controller, sender: nil)
         }

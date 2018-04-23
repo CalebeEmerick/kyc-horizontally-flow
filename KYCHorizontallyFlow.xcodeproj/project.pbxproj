@@ -15,6 +15,9 @@
 		3330F27320868C0B0063C9DD /* KeyboardSingleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330F27220868C0B0063C9DD /* KeyboardSingleInput.swift */; };
 		3330F27520868C290063C9DD /* QuestionTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330F27420868C290063C9DD /* QuestionTypeProtocol.swift */; };
 		3330F27720868C3C0063C9DD /* SingleInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330F27620868C3C0063C9DD /* SingleInputModel.swift */; };
+		33387703208E54B80021D303 /* Response2.json in Resources */ = {isa = PBXBuildFile; fileRef = 33387702208E54B80021D303 /* Response2.json */; };
+		33387705208E5AB80021D303 /* CNPJValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33387704208E5AB80021D303 /* CNPJValidator.swift */; };
+		33387708208E62400021D303 /* SimpleLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33387707208E62400021D303 /* SimpleLoading.swift */; };
 		33429B682089301A0009AFCD /* CPFValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33429B672089301A0009AFCD /* CPFValidator.swift */; };
 		33429B6A208A60670009AFCD /* KYCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33429B69208A60670009AFCD /* KYCDelegate.swift */; };
 		33579661208644EC004EB25D /* KYCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33579660208644EC004EB25D /* KYCViewModel.swift */; };
@@ -96,6 +99,9 @@
 		3330F27220868C0B0063C9DD /* KeyboardSingleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSingleInput.swift; sourceTree = "<group>"; };
 		3330F27420868C290063C9DD /* QuestionTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTypeProtocol.swift; sourceTree = "<group>"; };
 		3330F27620868C3C0063C9DD /* SingleInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInputModel.swift; sourceTree = "<group>"; };
+		33387702208E54B80021D303 /* Response2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Response2.json; sourceTree = "<group>"; };
+		33387704208E5AB80021D303 /* CNPJValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPJValidator.swift; sourceTree = "<group>"; };
+		33387707208E62400021D303 /* SimpleLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoading.swift; sourceTree = "<group>"; };
 		33429B672089301A0009AFCD /* CPFValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFValidator.swift; sourceTree = "<group>"; };
 		33429B69208A60670009AFCD /* KYCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCDelegate.swift; sourceTree = "<group>"; };
 		33579660208644EC004EB25D /* KYCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCViewModel.swift; sourceTree = "<group>"; };
@@ -186,6 +192,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		33387706208E62280021D303 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				33387707208E62400021D303 /* SimpleLoading.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 		3357965F208644D5004EB25D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +283,7 @@
 		3367F35F208547130041A399 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				33387706208E62280021D303 /* Loading */,
 				3367F38320854AC20041A399 /* JSON */,
 				3367F376208548C00041A399 /* Color */,
 				3367F36F2085488B0041A399 /* Keyboard */,
@@ -302,6 +317,7 @@
 			children = (
 				3367F34420853E4B0041A399 /* Assets.xcassets */,
 				3367F36D208547D00041A399 /* Response.json */,
+				33387702208E54B80021D303 /* Response2.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -345,6 +361,7 @@
 				3367F39220854C370041A399 /* Answer.swift */,
 				3367F39420854C620041A399 /* SingleInputValidationType.swift */,
 				33429B672089301A0009AFCD /* CPFValidator.swift */,
+				33387704208E5AB80021D303 /* CNPJValidator.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -528,6 +545,7 @@
 				3370CBA9208664E7005E3ED5 /* SingleChoiceCell.xib in Resources */,
 				3370CBAC208664E7005E3ED5 /* SingleChoiceAnswerCell.xib in Resources */,
 				33C68DBC208A9E0D00DA7D96 /* AnswerCell.xib in Resources */,
+				33387703208E54B80021D303 /* Response2.json in Resources */,
 				3370CBAD208664E7005E3ED5 /* SingleChoiceHeader.xib in Resources */,
 				3367F36E208547D00041A399 /* Response.json in Resources */,
 			);
@@ -561,6 +579,7 @@
 				33A02C62208697D900FB589C /* SingleChoiceModel.swift in Sources */,
 				3367F367208547730041A399 /* CollectionViewReusable.swift in Sources */,
 				3367F365208547730041A399 /* TableViewReusable.swift in Sources */,
+				33387705208E5AB80021D303 /* CNPJValidator.swift in Sources */,
 				338701D320866B62008637F2 /* SingleInputCellViewModel.swift in Sources */,
 				3367F374208548970041A399 /* KeyboardDelegate.swift in Sources */,
 				3367F38920854BD60041A399 /* MetaResponse.swift in Sources */,
@@ -588,6 +607,7 @@
 				3367F38720854B280041A399 /* QuestionsResponse.swift in Sources */,
 				33C68DBA208A9DF300DA7D96 /* AnswerCell.swift in Sources */,
 				3370CBA8208664E7005E3ED5 /* SingleChoiceAnswerCell.swift in Sources */,
+				33387708208E62400021D303 /* SimpleLoading.swift in Sources */,
 				3367F39120854C280041A399 /* SingleChoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

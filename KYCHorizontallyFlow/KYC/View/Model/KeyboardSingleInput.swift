@@ -20,10 +20,10 @@ struct KeyboardSingleInput {
         switch type {
         case .name:
             capitalization = .words
-        case .cpf:
+        case .cpf, .cnpj:
             self.type = .numberPad
         case .birthdate:
-            capitalization = .words
+            capitalization = .none
         case .other:
             capitalization = .sentences
         }
