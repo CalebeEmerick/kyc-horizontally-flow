@@ -22,11 +22,11 @@ extension SingleChoiceDataSource: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
-		let cell: SingleChoiceAnswerCell = tableView.dequeueReusableCell(for: indexPath)
-		
-		let answer = answers[indexPath.row]
-		cell.answer = answer
-		
+        let cell: SingleChoiceAnswerCell = tableView.dequeueReusableCell(for: indexPath)
+
+        let answer = answers[indexPath.row]
+        cell.answer = answer
+        
 		return cell
 	}
 }

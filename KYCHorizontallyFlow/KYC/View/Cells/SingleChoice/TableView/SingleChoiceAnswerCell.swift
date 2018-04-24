@@ -69,4 +69,9 @@ final class SingleChoiceAnswerCell: UITableViewCell {
         answerContainer.layer.cornerRadius = 3
         answerContainer.clipsToBounds = true
     }
+    
+    private func resetState() {
+        answerContainer.backgroundColor = .white
+        changeAnswerTextColor(to: Color(hexString: "#383838").color)
+    }
 }

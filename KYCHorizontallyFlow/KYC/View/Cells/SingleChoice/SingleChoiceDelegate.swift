@@ -10,12 +10,20 @@ import UIKit
 
 final class SingleChoiceDelegate: NSObject {
 	
+    var viewModel: SingleChoiceCellViewModel!
     var header: SingleChoiceHeader?
     var didSelectAnswer: ((IndexPath) -> Void)?
 }
 
 extension SingleChoiceDelegate: UITableViewDelegate {
 	
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if viewModel.selectedIndexPath == indexPath {
+            cell.isSelected = true
+        }
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         return header

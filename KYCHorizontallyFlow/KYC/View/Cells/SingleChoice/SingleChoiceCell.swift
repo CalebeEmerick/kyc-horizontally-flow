@@ -93,9 +93,10 @@ final class SingleChoiceCell: UICollectionViewCell {
     }
     
     private func setupDelegate() {
+        delegate.viewModel = viewModel
+        delegate.header = header
         header.title = viewModel.model.title
         tableView.delegate = delegate
-        delegate.header = header
         delegate.didSelectAnswer = { [weak self] indexPath in
             self?.footer.enableNextButton()
             self?.viewModel.selectedIndexPath = indexPath
